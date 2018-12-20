@@ -1,0 +1,16 @@
+{%extends "base.html"%}
+ {% block body_block %}
+<h1>View agenda page</h1>
+<div>
+
+<div id="updateAction">
+    <form method="POST">
+        <div class="jumbotron container form-group">
+        {{item_form.as_ul}}
+        {% csrf_token %}
+        <input type="submit" class="btn btn-primary" value="submit">
+            </div>
+    </form>
+</div>
+</div>
+{% endblock %}

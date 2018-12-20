@@ -1,0 +1,27 @@
+{%extends "base.html"%}
+ {% block body_block %}
+<h1>View agenda page</h1>
+<div>
+ {% if Items_rec %}
+    <table id="agendas">
+        <thead>
+            <th>Agenda_id</th>
+            <th>Item_title</th>
+            <th>Item_subject</th>
+            <th>Item_action_id</th>
+        </thead>
+
+        {% for tn in Items_rec %}
+        <tr>
+            <td>{{tn.Agenda_id}}</td>
+            <td>{{tn.Item_title}}</td>
+            <td>{{tn.Item_subject}}</td>
+            <td>{{tn.Item_action_id}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% else %}
+        <p>No records found</p>
+    {% endif %}
+</div>
+{% endblock %}

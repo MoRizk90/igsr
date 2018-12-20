@@ -1,0 +1,32 @@
+{%extends "base.html"%}
+ {% block body_block %}
+    <h1>This is the find agenda view</h1>
+    <div>
+ {% if agenda_results %}
+    <table id="agendas">
+        <thead>
+            <th>Date</th>
+            <th>Title</th>
+            <th>Creator</th>
+            <th>Agenda state</th>
+            <th>Department</th>
+        </thead>
+
+        {% for tn in agenda_results  %}
+
+        <tr>
+            <td>{{tn.Agenda_date}}</td>
+            <td><a href="{% url 'items' tn.Agenda_Id %}">{{tn.agenda_title}}</a></td>
+            <td>{{tn.creator}}</td>
+            <td>{{tn.agenda_state_Id}}</td>
+            <td>{{tn.Dept_id}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% else %}
+        <p>No records found</p>
+    {% endif %}
+</div>
+
+
+{% endblock %}

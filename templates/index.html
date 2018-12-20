@@ -1,0 +1,66 @@
+{%extends "base.html"%}
+ {% block body_block %}
+
+<h1>Index Page</h1>
+
+
+
+<div id="home_quicklinks">
+    <a class="quicklink link1" href="{% url 'addAgenda' %}">
+        <span class="ql_caption">
+            <span class="outer">
+                <span class="inner">
+                    <h2>ADD AGENDA</h2>
+                </span>
+            </span>
+        </span>
+        <span class="ql_top"></span>
+        <span class="ql_bottom"></span>
+    </a>
+    <a class="quicklink link1"  href="{% url 'viewAgenda' %}">
+        <span class="ql_caption">
+            <span class="outer">
+                <span class="inner">
+                    <h2>VIEW AGENDA</h2>
+                </span>
+            </span>
+        </span>
+        <span class="ql_top"></span>
+        <span class="ql_bottom"></span>
+    </a>
+    <a class="quicklink link1"  href="{% url 'addItems' %}">
+        <span class="ql_caption">
+            <span class="outer">
+                <span class="inner">
+                    <h2>ADD ITEMS</h2>
+                </span>
+            </span>
+        </span>
+        <span class="ql_top"></span>
+        <span class="ql_bottom"></span>
+    </a>
+     <a class="quicklink link1"  href="{% url 'goToAgendaSearch' %}">
+        <span class="ql_caption">
+            <span class="outer">
+                <span class="inner">
+                    <h2>Find Agenda</h2>
+                </span>
+            </span>
+        </span>
+        <span class="ql_top"></span>
+        <span class="ql_bottom"></span>
+    </a>
+    <a class="quicklink link1"  href="{% url 'agendaAction' %}">
+        <span class="ql_caption">
+            <span class="outer">
+                <span class="inner">
+                    <h2>Agenda Action</h2>
+                </span>
+            </span>
+        </span>
+        <span class="ql_top"></span>
+        <span class="ql_bottom"></span>
+    </a>
+</div>
+{% endblock %}
+

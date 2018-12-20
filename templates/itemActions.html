@@ -1,0 +1,31 @@
+{%extends "base.html"%}
+ {% block body_block %}
+<h1>View agenda page</h1>
+<div>
+    {{all_dict}}
+ {% if item_dict.Items_rec %}
+    <table id="agendas">
+        <thead>
+            <th>Agenda id</th>
+            <th>Item title</th>
+            <th>Item subject</th>
+            <th>Item action</th>
+        </thead>
+            {% for tn in item_dict.Items_rec %}
+
+                <tr>
+
+                    <td>{{tn.Agenda_id}}</td>
+                    <td><a href="{% url 'actionUpdate' tn.Item_id %}">{{tn.Item_title}}</a></td>
+                    <td>{{tn.Item_subject}}</td>
+                    <td>{{tn.Item_action_id}}</td>
+
+                </tr>
+
+        {% endfor %}
+    </table>
+    {% else %}
+        <p>No records found</p>
+    {% endif %}
+</div>
+{% endblock %}
